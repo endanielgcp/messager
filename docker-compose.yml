@@ -7,7 +7,7 @@ services:
             - 5000:5000
     rcon:
         image: redis
-        command: redis-server --appendonly yes
+        command: redis-server --requirepass AxD3R4T5L% --appendonly yes
         volumes:
             - redis_data:/data
 
