@@ -3,7 +3,7 @@ import redis
 
 app = Flask(__name__)
 
-r_con = redis.Redis(host='127.0.0.1', port=6379)
+r_con = redis.Redis(host='rcon', port=6379)
 
 @app.errorhandler(404)
 def resource_not_found(exception):
