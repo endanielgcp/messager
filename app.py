@@ -3,8 +3,8 @@ import redis
 import json
 from redis_health import health # Health check de redis
 from redis_con import r_con # Conexion a redis
-from functools import wraps # Decorators
-from hashlib import sha256 
+from functools import wraps # Decorators para autenticacion
+from hashlib import sha256
 
 app = Flask(__name__)
 
@@ -20,11 +20,14 @@ def auth_required(f):
     if auth and data[auth.username] ==  passw:  # comparacion de hashes
      return f( *args,  **kwargs)
     abort(401, description=("No autorizado"))
-   except Exception as exception:
+   except KeyError as exception:
     abort(401, description=("No autorizado")) # Excepcion para usuario no existente
+   except AttributeError as exception:
+    abort(500, description=("No se puede consultar"))
+
  return decorator
 
-#### Error handlers
+#### Manejo de excepciones
 @app.errorhandler(404)
 def resource_not_found(exception):
  return jsonify(error=str(exception)), 404
