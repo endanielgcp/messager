@@ -101,39 +101,37 @@ https://docs.docker.com/compose/install/
 
 Se debe en primer lugar clonar el repositorio, este es un repositorio privado por lo cual debes ser invitado a este y autenticarte para poder clonarlo.
 
-git clone https://github.com/endanielgcp/messager.git
+`git clone https://github.com/endanielgcp/messager.git`
 
 Dirigirse al directorio en el cual se descargó el repositorio
 
-cd messager
+`cd messager`
 
 Ejecutar Docker compose
 
-Docker-compose build
+`Docker-compose build`
 
 Se debe obtener un mensaje de creación exitosa
  
 Posteriormente ejecutar 
 
-docker-compose up
-
-Se debe obtener un resultado como el siguiente
+`docker-compose up`
  
 Si los procesos anteriores culminan exitosamente ya se puede utilizar la messager app.
 
 Para hacer uso de los endpoints de la aplicación se debe realizar una autenticación básica http, así:
 
-Usuario: brand
+`Usuario: brand`
 
-Password: Ford
+`Password: Ford`
 
  
 Las siguientes son las funciones aceptadas con los parámetros de autenticación:
-POST /api/queue/pop
+`POST /api/queue/pop`
    Parámetros: none
-POST /api/queue/push
+`POST /api/queue/push`
     Parámetros {message: “pusheo un mensaje”}
-GET /api/queue/count
+`GET /api/queue/count`
    Parámetros: none
-GET /api/queue/healthchk
+`GET /api/queue/healthchk`
    Parámetros: none
