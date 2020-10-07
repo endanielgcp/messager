@@ -100,20 +100,31 @@ En caso de no contar con Docker compose seguir las instrucciones del siguiente r
 https://docs.docker.com/compose/install/
 
 Se debe en primer lugar clonar el repositorio, este es un repositorio privado por lo cual debes ser invitado a este y autenticarte para poder clonarlo.
+
 git clone https://github.com/endanielgcp/messager.git
+
 Dirigirse al directorio en el cual se descargó el repositorio
+
 cd messager
+
 Ejecutar Docker compose
+
 Docker-compose build
+
 Se debe obtener un mensaje de creación exitosa
  
 Posteriormente ejecutar 
+
 docker-compose up
+
 Se debe obtener un resultado como el siguiente
  
 Si los procesos anteriores culminan exitosamente ya se puede utilizar la messager app.
+
 Para hacer uso de los endpoints de la aplicación se debe realizar una autenticación básica http, así:
+
 Usuario: brand
+
 Password: Ford
 
  
