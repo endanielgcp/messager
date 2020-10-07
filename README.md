@@ -127,11 +127,20 @@ Para hacer uso de los endpoints de la aplicación se debe realizar una autentica
 
  
 Las siguientes son las funciones aceptadas con los parámetros de autenticación:
+
 `POST /api/queue/pop`
+   
    Parámetros: none
+   
 `POST /api/queue/push`
+
     Parámetros {message: “pusheo un mensaje”}
+    
 `GET /api/queue/count`
+
    Parámetros: none
+   
 `GET /api/queue/healthchk`
+
    Parámetros: none
+   
